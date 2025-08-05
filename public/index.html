@@ -8,56 +8,68 @@
         table { border-collapse: collapse; width: 100%; text-align: center; }
         th, td { border: 1px solid #ccc; padding: 8px; }
         th { background: #4CAF50; color: white; }
-        thead th { background: #388E3C; }
+        thead tr:first-child th {
+            background: #388E3C;
+            color: white;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
-    <h1>Prayer Times</h1>
+    <h1>Prayer Times - Adoni</h1>
     <table id="prayerTable">
         <thead>
-            <tr id="headerRow">
-                <th>Prayer</th>
+            <tr>
+                <th rowspan="2">Masjid</th>
+                <th colspan="2">Fajr</th>
+                <th colspan="2">Dhuhr</th>
+                <th colspan="2">Asr</th>
+                <th colspan="2">Maghrib</th>
+                <th colspan="2">Isha</th>
+                <th colspan="2">Jumaa</th>
+            </tr>
+            <tr>
+                <th>Azan</th>
+                <th>Jamaat</th>
+                <th>Azan</th>
+                <th>Jamaat</th>
+                <th>Azan</th>
+                <th>Jamaat</th>
+                <th>Azan</th>
+                <th>Jamaat</th>
+                <th>Azan</th>
+                <th>Jamaat</th>
+                <th>Azan</th>
+                <th>Jamaat</th>
             </tr>
         </thead>
-        <tbody id="prayerBody"></tbody>
+        <tbody></tbody>
     </table>
 
     <script>
         fetch('/api/prayer-times')
             .then(response => response.json())
             .then(data => {
-                const masjids = Object.keys(data);
-                const prayers = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha", "Jumaa"];
-
-                // Add masjid names to the header
-                const headerRow = document.getElementById("headerRow");
-                masjids.forEach(masjid => {
-                    const th = document.createElement("th");
-                    th.textContent = masjid;
-                    headerRow.appendChild(th);
-                });
-
-                // Build table rows for each prayer
-                const tbody = document.getElementById("prayerBody");
-                prayers.forEach(prayer => {
-                    const row = document.createElement("tr");
-                    const prayerNameCell = document.createElement("td");
-                    prayerNameCell.textContent = prayer;
-                    row.appendChild(prayerNameCell);
-
-                    masjids.forEach(masjid => {
-                        const td = document.createElement("td");
-                        if (data[masjid][prayer]) {
-                            td.innerHTML = `<strong>Azan:</strong> ${data[masjid][prayer].Azan}<br>
-                                            <strong>Jamaat:</strong> ${data[masjid][prayer].Jamaat}`;
-                        } else {
-                            td.textContent = "-";
-                        }
-                        row.appendChild(td);
-                    });
-
+                const tbody = document.querySelector('#prayerTable tbody');
+                for (const masjid in data) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${masjid}</td>
+                        <td>${data[masjid].Fajr.Azan}</td>
+                        <td>${data[masjid].Fajr.Jamaat}</td>
+                        <td>${data[masjid].Dhuhr.Azan}</td>
+                        <td>${data[masjid].Dhuhr.Jamaat}</td>
+                        <td>${data[masjid].Asr.Azan}</td>
+                        <td>${data[masjid].Asr.Jamaat}</td>
+                        <td>${data[masjid].Maghrib.Azan}</td>
+                        <td>${data[masjid].Maghrib.Jamaat}</td>
+                        <td>${data[masjid].Isha.Azan}</td>
+                        <td>${data[masjid].Isha.Jamaat}</td>
+                        <td>${data[masjid].Jumaa.Azan}</td>
+                        <td>${data[masjid].Jumaa.Jamaat}</td>
+                    `;
                     tbody.appendChild(row);
-                });
+                }
             });
     </script>
 </body>
