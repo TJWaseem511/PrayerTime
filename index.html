@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Masjid Prayer Times</title>
+    <style>
+        body { font-family: Arial; text-align: center; }
+        table { margin: auto; border-collapse: collapse; width: 60%; }
+        th, td { border: 1px solid #ccc; padding: 10px; }
+        th { background: #4CAF50; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Prayer Times</h1>
+    <table id="prayerTable">
+        <thead>
+            <tr>
+                <th>Masjid</th>
+                <th>Fajr</th>
+                <th>Dhuhr</th>
+                <th>Asr</th>
+                <th>Maghrib</th>
+                <th>Isha</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        fetch('prayer_times.json')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector('#prayerTable tbody');
+                for (const masjid in data) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${masjid}</td>
+                                     <td>${data[masjid].Fajr}</td>
+                                     <td>${data[masjid].Dhuhr}</td>
+                                     <td>${data[masjid].Asr}</td>
+                                     <td>${data[masjid].Maghrib}</td>
+                                     <td>${data[masjid].Isha}</td>`;
+                    tbody.appendChild(row);
+                }
+            });
+    </script>
+</body>
+</html>

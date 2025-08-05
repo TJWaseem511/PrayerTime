@@ -1,0 +1,17 @@
+{
+    "Masjid Al Noor": {
+      "Fajr": "05:15 AM",
+      "Dhuhr": "12:45 PM",
+      "Asr": "04:15 PM",
+      "Maghrib": "06:55 PM",
+      "Isha": "08:10 PM"
+    },
+    "Masjid Quba": {
+      "Fajr": "05:10 AM",
+      "Dhuhr": "12:40 PM",
+      "Asr": "04:10 PM",
+      "Maghrib": "06:50 PM",
+      "Isha": "08:05 PM"
+    }
+  }
+  
