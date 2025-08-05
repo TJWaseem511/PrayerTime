@@ -3,12 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Masjid Prayer Times</title>
-    <style>
-        body { font-family: Arial; text-align: center; }
-        table { margin: auto; border-collapse: collapse; width: 60%; }
-        th, td { border: 1px solid #ccc; padding: 10px; }
-        th { background: #4CAF50; color: white; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Prayer Times</h1>
@@ -27,7 +22,7 @@
     </table>
 
     <script>
-        fetch('prayer_times.json')
+        fetch('/api/prayer-times')
             .then(response => response.json())
             .then(data => {
                 const tbody = document.querySelector('#prayerTable tbody');
