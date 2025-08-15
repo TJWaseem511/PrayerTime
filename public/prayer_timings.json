@@ -2,41 +2,45 @@
   {
     "name": "Fateh Darwaza Masjid",
     "timings": [
-      {"prayer": "Fajr", "azan": "05:15", "iqamah": "05:30"},
-      {"prayer": "Dhuhr", "azan": "13:15", "iqamah": "13:30"},
-      {"prayer": "Asr", "azan": "17:15", "iqamah": "17:30"},
-      {"prayer": "Maghrib", "azan": "Sunset", "iqamah": "17:45"},
-      {"prayer": "Isha", "azan": "20:15", "iqamah": "20:30"}
+      {"prayer": "Fajr", "azan": "04:55 AM", "iqamah": "05:15 AM"},
+      {"prayer": "Dhuhr", "azan": "12:40 PM", "iqamah": "01:00 PM"},
+      {"prayer": "Asr", "azan": "04:00 PM", "iqamah": "04:15 PM"},
+      {"prayer": "Maghrib", "azan": "06:45 PM", "iqamah": "06:49 PM"},
+      {"prayer": "Isha", "azan": "08:25 PM", "iqamah": "08:40 PM"},
+      {"prayer": "Jumaa", "azan": "12:55 PM", "iqamah": "01:40 PM"}
     ]
   },
   {
     "name": "Ghorkad Masjid",
     "timings": [
-      {"prayer": "Fajr", "azan": "05:20", "iqamah": "05:35"},
-      {"prayer": "Dhuhr", "azan": "13:10", "iqamah": "13:25"},
-      {"prayer": "Asr", "azan": "17:10", "iqamah": "17:25"},
-      {"prayer": "Maghrib", "azan": "Sunset", "iqamah": "17:50"},
-      {"prayer": "Isha", "azan": "20:20", "iqamah": "20:35"}
+      {"prayer": "Fajr", "azan": "04:55 AM", "iqamah": "05:15 AM"},
+      {"prayer": "Dhuhr", "azan": "12:40 PM", "iqamah": "01:00 PM"},
+      {"prayer": "Asr", "azan": "04:00 PM", "iqamah": "04:15 PM"},
+      {"prayer": "Maghrib", "azan": "06:45 PM", "iqamah": "06:49 PM"},
+      {"prayer": "Isha", "azan": "08:25 PM", "iqamah": "08:40 PM"},
+      {"prayer": "Jumaa", "azan": "12:55 PM", "iqamah": "01:40 PM"}
     ]
   },
   {
     "name": "Masjid-e-Mohammadia",
     "timings": [
-      {"prayer": "Fajr", "azan": "05:10", "iqamah": "05:25"},
-      {"prayer": "Dhuhr", "azan": "13:05", "iqamah": "13:20"},
-      {"prayer": "Asr", "azan": "17:00", "iqamah": "17:15"},
-      {"prayer": "Maghrib", "azan": "Sunset", "iqamah": "17:40"},
-      {"prayer": "Isha", "azan": "20:05", "iqamah": "20:20"}
+      {"prayer": "Fajr", "azan": "04:55 AM", "iqamah": "05:15 AM"},
+      {"prayer": "Dhuhr", "azan": "12:40 PM", "iqamah": "01:00 PM"},
+      {"prayer": "Asr", "azan": "04:00 PM", "iqamah": "04:15 PM"},
+      {"prayer": "Maghrib", "azan": "06:45 PM", "iqamah": "06:49 PM"},
+      {"prayer": "Isha", "azan": "08:25 PM", "iqamah": "08:40 PM"},
+      {"prayer": "Jumaa", "azan": "12:55 PM", "iqamah": "01:40 PM"}
     ]
   },
   {
     "name": "Masjid-e-Azeezia",
     "timings": [
-      {"prayer": "Fajr", "azan": "05:25", "iqamah": "05:40"},
-      {"prayer": "Dhuhr", "azan": "13:20", "iqamah": "13:35"},
-      {"prayer": "Asr", "azan": "17:20", "iqamah": "17:35"},
-      {"prayer": "Maghrib", "azan": "Sunset", "iqamah": "17:55"},
-      {"prayer": "Isha", "azan": "20:25", "iqamah": "20:40"}
+      {"prayer": "Fajr", "azan": "04:55 AM", "iqamah": "05:15 AM"},
+      {"prayer": "Dhuhr", "azan": "12:40 PM", "iqamah": "01:00 PM"},
+      {"prayer": "Asr", "azan": "04:00 PM", "iqamah": "04:15 PM"},
+      {"prayer": "Maghrib", "azan": "06:45 PM", "iqamah": "06:49 PM"},
+      {"prayer": "Isha", "azan": "08:25 PM", "iqamah": "08:40 PM"},
+      {"prayer": "Jumaa", "azan": "12:55 PM", "iqamah": "01:40 PM"}
     ]
   }
 ]
