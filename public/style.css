@@ -8,11 +8,6 @@ body {
   min-height: 100vh;
 }
 
-hr {
-    border: 2px solid #ccc; /* Customize border color and thickness */
-    margin: 20px 0; /* Add vertical spacing */
-}
-
 #mainContainer {
   width: 100%;
   max-width: 800px;
