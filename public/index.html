@@ -1,76 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Masjid Prayer Times</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        table { border-collapse: collapse; width: 100%; text-align: center; }
-        th, td { border: 1px solid #ccc; padding: 8px; }
-        th { background: #4CAF50; color: white; }
-        thead tr:first-child th {
-            background: #388E3C;
-            color: white;
-            font-size: 1.1em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prayer Timings</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Prayer Times - Adoni</h1>
-    <table id="prayerTable">
-        <thead>
-            <tr>
-                <th rowspan="2">Masjid</th>
-                <th colspan="2">Fajr</th>
-                <th colspan="2">Dhuhr</th>
-                <th colspan="2">Asr</th>
-                <th colspan="2">Maghrib</th>
-                <th colspan="2">Isha</th>
-                <th colspan="2">Jumaa</th>
-            </tr>
-            <tr>
-                <th>Azan</th>
-                <th>Jamaat</th>
-                <th>Azan</th>
-                <th>Jamaat</th>
-                <th>Azan</th>
-                <th>Jamaat</th>
-                <th>Azan</th>
-                <th>Jamaat</th>
-                <th>Azan</th>
-                <th>Jamaat</th>
-                <th>Azan</th>
-                <th>Jamaat</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
 
-    <script>
-        fetch('/api/prayer-times')
-            .then(response => response.json())
-            .then(data => {
-                const tbody = document.querySelector('#prayerTable tbody');
-                for (const masjid in data) {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${masjid}</td>
-                        <td>${data[masjid].Fajr.Azan}</td>
-                        <td>${data[masjid].Fajr.Jamaat}</td>
-                        <td>${data[masjid].Dhuhr.Azan}</td>
-                        <td>${data[masjid].Dhuhr.Jamaat}</td>
-                        <td>${data[masjid].Asr.Azan}</td>
-                        <td>${data[masjid].Asr.Jamaat}</td>
-                        <td>${data[masjid].Maghrib.Azan}</td>
-                        <td>${data[masjid].Maghrib.Jamaat}</td>
-                        <td>${data[masjid].Isha.Azan}</td>
-                        <td>${data[masjid].Isha.Jamaat}</td>
-                        <td>${data[masjid].Jumaa.Azan}</td>
-                        <td>${data[masjid].Jumaa.Jamaat}</td>
-                    `;
-                    tbody.appendChild(row);
-                }
-            });
-    </script>
+<h1 style="text-align:center;">Prayer Timings</h1>
+
+<div id="masjidsContainer">
+  <!-- Masjid cards will be generated here -->
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
