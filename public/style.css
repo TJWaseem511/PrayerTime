@@ -1,4 +1,62 @@
-body { font-family: Arial; text-align: center; }
-table { margin: auto; border-collapse: collapse; width: 60%; }
-th, td { border: 1px solid #ccc; padding: 10px; }
-th { background: #4CAF50; color: white; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.masjid-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.masjid-header {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.masjid-header:hover {
+    background: #45a049;
+}
+
+.masjid-timings {
+    display: none;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.masjid-timings table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.masjid-timings th, 
+.masjid-timings td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+    .masjid-header {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .masjid-timings table th, 
+    .masjid-timings table td {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
