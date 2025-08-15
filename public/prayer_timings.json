@@ -13,23 +13,23 @@
   {
     "name": "Ghorkad Masjid",
     "timings": [
-      {"prayer": "Fajr", "azan": "04:55 AM", "iqamah": "05:15 AM"},
+      {"prayer": "Fajr", "azan": "04:53 AM", "iqamah": "05:10 AM"},
       {"prayer": "Dhuhr", "azan": "12:40 PM", "iqamah": "01:00 PM"},
-      {"prayer": "Asr", "azan": "04:00 PM", "iqamah": "04:15 PM"},
-      {"prayer": "Maghrib", "azan": "06:45 PM", "iqamah": "06:49 PM"},
-      {"prayer": "Isha", "azan": "08:25 PM", "iqamah": "08:40 PM"},
-      {"prayer": "Jumaa", "azan": "12:55 PM", "iqamah": "01:40 PM"}
+      {"prayer": "Asr", "azan": "03:40 PM", "iqamah": "04:00 PM"},
+      {"prayer": "Maghrib", "azan": "06:45 PM", "iqamah": "06:51 PM"},
+      {"prayer": "Isha", "azan": "08:00 PM", "iqamah": "08:20 PM"},
+      {"prayer": "Jumaa", "azan": "12:55 PM", "iqamah": "01:30 PM"}
     ]
   },
   {
     "name": "Masjid-e-Mohammadia",
     "timings": [
       {"prayer": "Fajr", "azan": "04:55 AM", "iqamah": "05:15 AM"},
-      {"prayer": "Dhuhr", "azan": "12:40 PM", "iqamah": "01:00 PM"},
+      {"prayer": "Dhuhr", "azan": "10:00 PM", "iqamah": "01:15 PM"},
       {"prayer": "Asr", "azan": "04:00 PM", "iqamah": "04:15 PM"},
-      {"prayer": "Maghrib", "azan": "06:45 PM", "iqamah": "06:49 PM"},
-      {"prayer": "Isha", "azan": "08:25 PM", "iqamah": "08:40 PM"},
-      {"prayer": "Jumaa", "azan": "12:55 PM", "iqamah": "01:40 PM"}
+      {"prayer": "Maghrib", "azan": "06:48 PM", "iqamah": "06:55 PM"},
+      {"prayer": "Isha", "azan": "08:15 PM", "iqamah": "08:30 PM"},
+      {"prayer": "Jumaa", "azan": "1:00 PM", "iqamah": "01:35 PM"}
     ]
   },
   {

@@ -115,7 +115,7 @@ h1 {
 
 /* Striped rows */
 .masjid-timings tbody tr:nth-child(odd) {
-  background-color: #f5f9fc;
+  background-color: #807f7f;
 }
 
 .masjid-timings tbody tr:nth-child(even) {
