@@ -1,13 +1,23 @@
 // Toggle timings display, same as before
 function toggleTimings(header) {
-  const timings = header.nextElementSibling;
+    const timings = header.nextElementSibling;
 
-  document.querySelectorAll('.masjid-timings').forEach(section => {
-    if (section !== timings) section.style.display = 'none';
-  });
+    document.querySelectorAll('.masjid-timings').forEach(section => {
+        if (section !== timings) {
+            section.style.display = 'none';
+            section.previousElementSibling.classList.remove('active');
+        }
+    });
 
-  timings.style.display = (timings.style.display === 'block') ? 'none' : 'block';
+    if (timings.style.display === 'block') {
+        timings.style.display = 'none';
+        header.classList.remove('active');
+    } else {
+        timings.style.display = 'block';
+        header.classList.add('active');
+    }
 }
+
 
 // Function to build the masjid cards dynamically from JSON data
 async function loadMasjids() {
