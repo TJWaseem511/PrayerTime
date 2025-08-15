@@ -1,62 +1,147 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  background: #eef2f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#mainContainer {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  padding: 32px 24px;
+  margin: 40px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    color: #333;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 28px;
+  color: #333;
+  letter-spacing: 1px;
 }
 
+#masjidsContainer {
+  width: 100%;
+}
+
+/* Masjid card styling */
 .masjid-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin: 10px;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.masjid-card:last-child {
+  border-bottom: none;
 }
 
 .masjid-header {
-    background: #4CAF50;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
+  background: none;
+  color: #2c3e50;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.masjid-header:hover {
-    background: #45a049;
+.masjid-header:hover,
+.masjid-header.active {
+  background: #3498db;
+  color: white;
+}
+
+.masjid-header::after {
+  content: '▼';
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.masjid-header.active::after {
+  transform: rotate(180deg);
 }
 
 .masjid-timings {
-    display: none;
-    padding: 10px;
-    background: #f9f9f9;
+  padding: 15px 10px 25px 10px;
+  background: #f9fbfd;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: none;
+  box-shadow: inset 0 0 8px rgba(52, 152, 219, 0.08);
 }
 
+/* Timings Table */
 .masjid-timings table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
 }
 
-.masjid-timings th, 
+.masjid-timings th {
+  text-align: center;
+  padding: 10px 12px;
+  font-weight: 700;
+  color: white;
+  background-color: #4a90e2;       /* Cleaner, softer blue */
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 2px 5px rgba(74, 144, 226, 0.4);
+  user-select: none;
+}
+
 .masjid-timings td {
-    padding: 8px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+  padding: 10px 12px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  text-align: center;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Striped rows */
+.masjid-timings tbody tr:nth-child(odd) {
+  background-color: #807f7f;
+}
+
+.masjid-timings tbody tr:nth-child(even) {
+  background-color: white;
 }
 
 @media (max-width: 600px) {
-    .masjid-header {
-        font-size: 16px;
-        padding: 10px;
-    }
-    .masjid-timings table th, 
-    .masjid-timings table td {
-        font-size: 14px;
-        padding: 6px;
-    }
+  body {
+    padding: 0;
+  }
+  #mainContainer {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 12px 2px;
+    margin: 0;
+  }
+  h1 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+  .masjid-header {
+    font-size: 18px;
+    padding: 8px 8px;
+  }
+  .masjid-timings td, .masjid-timings th {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
 }
