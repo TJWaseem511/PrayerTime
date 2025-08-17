@@ -7,25 +7,22 @@ html, body {
   background: white;
 }
 
-/* Main container grows to fill space, pushing footer down if possible */
 body {
-  flex: 1 0 auto;
+  justify-content: center;
   min-height: 100vh;
 }
 
-/* Main content styling */
 #mainContainer {
   flex: 1 0 auto;
   width: 100%;
   max-width: 800px;
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 24px 0 24px;
 }
 
 h1 {
@@ -47,6 +44,7 @@ h1 {
   padding: 15px 0;
   width: 100%;
 }
+
 
 .masjid-header {
   background: none;
@@ -115,25 +113,25 @@ h1 {
   color: #2c3e50;
 }
 
+
 /* Footer styles */
 #footer {
   flex-shrink: 0;
   width: 100%;
-  background-color: #2a6ebb;
-  padding: 20px 0;
+  padding: 20px 12px;
   box-sizing: border-box;
+  margin-bottom: 20px;
   text-align: center;
-  border-radius: 0 0 12px 12px;
-  margin: 0; /* No margin, so no gap and always visible */
+  border-radius: 10px;
 }
 
 .footer-container {
   max-width: 800px;
   margin: 0 auto;
+  border-radius: 0 0 12px 12px;
 }
 
 .footer-link {
-  color: #fff;
   font-weight: 600;
   font-size: 18px;
   text-decoration: none;
@@ -145,10 +143,13 @@ h1 {
 }
 
 @media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
   #mainContainer {
     box-shadow: none;
     border-radius: 0;
-    padding: 20px 2px 0 2px;
+    padding: 20px 2px;
     margin: 0 auto;
   }
   h1 {
@@ -163,12 +164,12 @@ h1 {
     font-size: 20px;
     padding: 6px 6px;
   }
+  /* Increase card height on small screens */
   .masjid-card {
     min-height: 40px;
   }
   #footer {
-    padding: 16px 0;
-    border-radius: 0 0 10px 10px;
+    padding: 16px 8px;
   }
   .footer-link {
     font-size: 16px;
