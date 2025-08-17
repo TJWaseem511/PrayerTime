@@ -1,21 +1,24 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  background: #eef2f7;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+}
+
+body {
   justify-content: center;
   min-height: 100vh;
 }
 
 #mainContainer {
+  flex: 1 0 auto;
   width: 100%;
   max-width: 800px;
-  background: white;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  padding: 32px 24px;
-  margin: 40px 0;
+  margin: 40px auto 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -42,9 +45,6 @@ h1 {
   width: 100%;
 }
 
-.masjid-card:last-child {
-  border-bottom: none;
-}
 
 .masjid-header {
   background: none;
@@ -97,7 +97,7 @@ h1 {
   padding: 10px 12px;
   font-weight: 700;
   color: white;
-  background-color: #4a90e2;       /* Cleaner, softer blue */
+  background-color: #4a90e2;
   border-radius: 6px 6px 0 0;
   box-shadow: 0 2px 5px rgba(74, 144, 226, 0.4);
   user-select: none;
@@ -113,13 +113,33 @@ h1 {
   color: #2c3e50;
 }
 
-/* Striped rows */
-.masjid-timings tbody tr:nth-child(odd) {
-  background-color: #807f7f;
+
+/* Footer styles */
+#footer {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
 }
 
-.masjid-timings tbody tr:nth-child(even) {
-  background-color: white;
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 0 0 12px 12px;
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #d1eaff;
 }
 
 @media (max-width: 600px) {
@@ -129,11 +149,11 @@ h1 {
   #mainContainer {
     box-shadow: none;
     border-radius: 0;
-    padding: 12px 2px;
-    margin: 0;
+    padding: 20px 2px;
+    margin: 0 auto 0 auto;
   }
   h1 {
-    font-size: 22px;
+    font-size: 25px;
     margin-bottom: 18px;
   }
   .masjid-header {
@@ -143,5 +163,15 @@ h1 {
   .masjid-timings td, .masjid-timings th {
     font-size: 20px;
     padding: 6px 6px;
+  }
+  /* Increase card height on small screens */
+  .masjid-card {
+    min-height: 40px;
+  }
+  #footer {
+    padding: 16px 8px;
+  }
+  .footer-link {
+    font-size: 16px;
   }
 }
